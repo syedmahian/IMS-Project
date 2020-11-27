@@ -18,12 +18,12 @@ public class CustomerDAOTest {
 
 	@BeforeClass
 	public static void init() {
-		DBUtils.connect("root", "pass");
+		DBUtils.connect("root", "root");
 	}
 
 	@Before
 	public void setup() {
-		DBUtils.getInstance().init("src/test/resources/sql-schema.sql", "src/test/resources/sql-data.sql");
+		DBUtils.getInstance().init("src/test/resources/sql-schema.sql", "src/test/resources/sql-data.sql"); //
 	}
 
 	@Test
@@ -38,6 +38,7 @@ public class CustomerDAOTest {
 		expected.add(new Customer(1L, "jordan", "harrison"));
 		assertEquals(expected, DAO.readAll());
 	}
+
 
 	@Test
 	public void testReadLatest() {

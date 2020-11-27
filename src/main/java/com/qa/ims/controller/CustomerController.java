@@ -14,8 +14,6 @@ import com.qa.ims.utils.Utils;
  *
  */
 
-//This is a test comment
-
 
 public class CustomerController implements CrudController<Customer> {
 
