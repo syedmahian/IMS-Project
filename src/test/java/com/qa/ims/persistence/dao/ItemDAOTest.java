@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.qa.ims.persistence.domain.Customer;
 import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.DBUtils;
 
@@ -39,6 +38,28 @@ public class ItemDAOTest {
 		assertEquals(created, itemDAO.create(created));
 	}
 	
+	@Test
+	public void testReadLatest() {
+		assertEquals(new Item(2L, "Pepsi", 3L), itemDAO.readLatest());
+	}
+	
+	@Test
+	public void testRead() {
+		final long ID = 1L;
+		assertEquals(new Item(ID, "Monster", 2L), itemDAO.readItem(ID));
+	}
+	
+	@Test
+	public void testUpdate() {
+		final Item updated = new Item(2L, "Dr Pepper", 3L);
+		assertEquals(updated, itemDAO.update(updated));
+
+	}
+	
+	@Test
+	public void testDelete() {
+		assertEquals(1, itemDAO.delete(1));
+	}
 	
 	
 }

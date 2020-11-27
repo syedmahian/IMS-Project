@@ -2,10 +2,15 @@ package com.qa.ims.persistence.domain;
 
 public class Item {
 	
+	
+	// Attributes
+	
 	private Long id;
 	private String itemName;
 	private Long price;
-
+	
+	
+	// Constructor
 	public Item(String itemName, Long price) {
 		this.itemName = itemName;
 		this.price= price;
@@ -18,7 +23,8 @@ public class Item {
 	}
 
 
-
+	// Getters and Setters
+	
 	public Long getId() {
 		return id;
 	}
@@ -42,7 +48,10 @@ public class Item {
 	public void setPrice (Long price) {
 		this.price = price;
 	}
-
+	
+	
+	// Methods
+	
 	@Override
 	public String toString() {
 		return "id:" + id + " Item name:" + itemName + " Price:" + price;

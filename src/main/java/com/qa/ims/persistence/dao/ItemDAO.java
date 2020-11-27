@@ -15,6 +15,7 @@ import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.DBUtils;
 
 public class ItemDAO implements Dao<Item> {
+
 	
 	
 	public static final Logger LOGGER = LogManager.getLogger();
@@ -95,7 +96,7 @@ public class ItemDAO implements Dao<Item> {
 	}
 
 	/**
-	 * Updates a customer in the database
+	 * Updates an item in the database
 	 * 
 	 * @param item - takes in a item object, the id field will be used to
 	 *                 update that item in the database
@@ -116,9 +117,9 @@ public class ItemDAO implements Dao<Item> {
 	}
 
 	/**
-	 * Deletes a customer in the database
+	 * Deletes an item in the database
 	 * 
-	 * @param id - id of the customer
+	 * @param id - id of the item
 	 */
 	@Override
 	public int delete(long id) {
@@ -132,4 +133,4 @@ public class ItemDAO implements Dao<Item> {
 		return 0;
 	}
 
-}
+} 

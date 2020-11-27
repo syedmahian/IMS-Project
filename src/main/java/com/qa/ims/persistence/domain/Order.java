@@ -4,14 +4,16 @@ import java.util.List;
 
 public class Order {
 	
-	private Long orderId; //orderId: used to be id
-	private Long customerId; // customerId: itemName
+	//Attributes 
+	
+	private Long orderId;
+	private Long customerId; 
 	private List<Item> itemId;
 	private Long itemPrice;
 	
 
 	
-	//Only one constructor, ask the boys if that's what they did
+	// Constructors
 	
 	public Order(Long customerId) {
 		super();
@@ -43,7 +45,8 @@ public class Order {
 		this.setItemPrice(itemPrice);
 	}
 
-
+	//Getters and setters
+	
 	public Long getOrderId() {
 		return orderId;
 	}
@@ -76,7 +79,7 @@ public class Order {
 		this.itemPrice = itemPrice;
 	}
 
-	
+	// Methods 
 
 	@Override
 	public String toString() {
@@ -105,7 +108,6 @@ public class Order {
 		} else if (!orderId.equals(other.orderId))
 			return false;
 		
-//
 		if (itemPrice == null) {
 			if (other.itemPrice != null)
 				return false;
