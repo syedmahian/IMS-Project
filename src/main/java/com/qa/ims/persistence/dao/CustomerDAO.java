@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.qa.ims.persistence.domain.Customer;
 import com.qa.ims.utils.DBUtils;
-
+//TEST
 public class CustomerDAO implements Dao<Customer> {
 
 	public static final Logger LOGGER = LogManager.getLogger();
