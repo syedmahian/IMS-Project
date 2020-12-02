@@ -92,7 +92,7 @@ public class OrderDAO implements Dao<Order> {
 	public Order create(Order order) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				Statement statement = connection.createStatement();) {
-			statement.executeUpdate("INSERT INTO orders(fk_customer_id) values('" + order.getCustomerId() + "')");
+			statement.executeUpdate("INSERT INTO orders(fk_customer_id) values(" + order.getCustomerId() + ")");
 			return readLatest();
 		} catch (Exception e) {
 			LOGGER.debug(e);

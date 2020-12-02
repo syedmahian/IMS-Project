@@ -1,5 +1,6 @@
 package com.qa.ims.persistence.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
@@ -8,7 +9,7 @@ public class Order {
 	
 	private Long orderId;
 	private Long customerId; 
-	private List<Item> itemId;
+	private List<Item> itemId = new ArrayList<>();
 	private Long itemPrice;
 	
 
@@ -83,7 +84,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order id:" + orderId + " customer id:" + customerId;
+		return "Order id:" + orderId + " Customer id:" + customerId + "Item" + itemId;
 	}
 
 	@Override
