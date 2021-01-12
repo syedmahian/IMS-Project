@@ -1,7 +1,7 @@
 Coverage: 34%
-# Project Title
+# Inventory Management System
 
-One Paragraph of project description goes here
+The Inventory Management System or IMS project is a Maven project with full CRUD functionalities for customers, items and orders. The aim of the project was to build a system that can store and manipulate data on the cloud. This was done using a mySQL database which was hosted on GCP. The system was then tested using Junit and Mokito.
 
 ## Getting Started
 
@@ -12,57 +12,45 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Install: Eclipse IDE for Java and JDK14 as well as MySQL Server (locally running the project). You can also run the MySQL Server on a GCP instance.
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+The repository can be cloned with the following command in your terminal Make sure you are running the latest version of Java and MySQL 5.7 Server. The DBUtils files need to be changed to reflect this with your MySQL IP address. Cloning the project will give you an IMS-Starter directory which you can open in Eclipse or another IDE of your choice.
 
 ```
-Give the example
+git clone <repoURL>.git
 ```
 
-And repeat
+## Running the project
+
+Once the project starts it will ask the user to enter their username and password which are booth "root".
 
 ```
-until finished
+user: root
+password:root
+```
+Once the correct username and password has been provided the user can interact with the system by typing in the entity name they want to use. Then follow the instructions on the commandline.
+
+```
+Which entity would you like to use?
+CUSTOMER: Information about customers
+ITEM: Individual Items
+ORDER: Purchases of items
+STOP: To close the application
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+
+
+
 
 Explain how to run the automated tests for this system. Break down into which tests and what they do
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+Unit test was 37% due to time constraints. However, testing is ongoing and I aim to improve the coverage over time.
 
 ## Built With
 
